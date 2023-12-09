@@ -4,7 +4,7 @@ require('dotenv').config({ path: './config.env' });
 
 const cors = require('cors');
 const app = express();
-const port = 80; // Choose a port number for your server
+const port = 443; // Choose a port number for your server
 
 app.use(cors())
 
