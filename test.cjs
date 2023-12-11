@@ -66,6 +66,25 @@ app.get('/api/charts', async (req, res) => {
   }
 });
 
+app.get('/api/songs', async (req, res) => {
+  const db = process.env.ATLAS_URI;
+  const client = new MongoClient(db);
+
+  try {
+    await client.connect();
+    const database = client.db('maimai');
+    const collection = database.collection('charts');
+
+    const documents = await collection.find().toArray();
+    res.json(documents);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  } finally {
+    await client.close();
+  }
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
