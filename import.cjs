@@ -8,428 +8,672 @@ async function main() {
   try {
   await client.connect()
   const database = client.db("maimai")
-  const collection = database.collection("songs")
+  const collection = database.collection("charts")
 
   const documents = [
     {
-      "_id": "1jAYpsKVn9mTMWDvzewc",
-      "title": "Garakuta Doll Play"
+      "_id": "0fMsi4ISnovifvlxKvg4",
+      "chart_id": "RlzrC9zFfXnRkPJO7NDX",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "1LIMxZnmjpTrCTOqNEMp",
-      "title": "Sage"
+      "_id": "14aG67BxQAVRf2C2M5M6",
+      "chart_id": "BoYaLY0e3c2hNqChNNHZ",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "2DwOtcsxDc6r4z1HdpuU",
-      "title": "Hello, Hologram"
+      "_id": "16tW9DMHmr0OoHpMY8u9",
+      "chart_id": "yXPkBfchyvRDIvxm9eyV",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "2J2vIrf9vOLhW3QXXLQ8",
-      "title": "ULTRA SYNERGY MATRIX"
+      "_id": "1NnatSfgRZWWyrdTYslO",
+      "chart_id": "mu2X8JFqLytxG1s8XcMv",
+      "chart": "d",
+      "version_released": "Splash"
     },
     {
-      "_id": "2Jv6KY0o3m275abGdQOm",
-      "title": "Glorious Crown"
+      "_id": "3DxsbSDWpLMJwvaNKNh6",
+      "chart_id": "nBvFiSAx2jWxyrA9nkD6",
+      "chart": "s",
+      "version_released": "Murasaki"
     },
     {
-      "_id": "3OCVPmqKUEiAazkcdRv5",
-      "title": "Metamorphosism"
+      "_id": "3jOujFgdBOvg6M65PfL4",
+      "chart_id": "lWwx7BGNUmhi48SVFONL",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "4hcCHzvY83bStWcQCbJT",
-      "title": "超熊猫的周游记（ワンダーパンダートラベラー）"
+      "_id": "3srBDz7Dy2KKyD0VG6nl",
+      "chart_id": "sArsGPuHpG6aSRBUuIOB",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "4nwz8dr31hy7BrHKW3h6",
-      "title": "最強STRONGER"
+      "_id": "4J993qXTMEDepOpuMUSz",
+      "chart_id": "AqNrejI26bgwvtoWkqSz",
+      "chart": "s",
+      "version_released": "Maimai"
     },
     {
-      "_id": "5H63NdrnvfaLg5So5WPQ",
-      "title": "Halfway(>∀<)"
+      "_id": "4pWjMNKRetDMU8WjG8TK",
+      "chart_id": "1LIMxZnmjpTrCTOqNEMp",
+      "chart": "d",
+      "version_released": "Universe+"
     },
     {
-      "_id": "62btfKqnYk54DBGBCNwj",
-      "title": "WiPE OUT MEMORIES"
+      "_id": "6LQUujrDidqcbsnjaQmU",
+      "chart_id": "SiZN26nqAVcOHy29Mbvm",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "6uj52Y0LqXbLkszgbRYy",
-      "title": "Calamity Fortune"
+      "_id": "78TP0SqMbReAOTeIA90p",
+      "chart_id": "e2gH2Jn5fAsSdGjuuWy6",
+      "chart": "s",
+      "version_released": "Murasaki+"
     },
     {
-      "_id": "7V786CXpdnztOQJESSoY",
-      "title": "星界ちゃんと可不ちゃんのおつかい合騒曲"
+      "_id": "7mycR7mEChbBBhJJrpol",
+      "chart_id": "ENjsOYwDQT7cR8cebetN",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "9kfTZmWRJP2uL8DFh1fF",
-      "title": "GEOMETRIC DANCE"
+      "_id": "7rqsxVrHwsFvyA6y4PbH",
+      "chart_id": "d0P6DS66gUqCRnWC35QQ",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "9orKYl5u4wLwv2L0FLQE",
-      "title": "my flow"
+      "_id": "8qTPTsqBCVkqQTvYK0HY",
+      "chart_id": "yWj7yd1GWvNyKWnDS7T5",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "AqNrejI26bgwvtoWkqSz",
-      "title": "In Chaos"
+      "_id": "95gSLCFayzzyQ05NkuZC",
+      "chart_id": "1jAYpsKVn9mTMWDvzewc",
+      "chart": "s",
+      "version_released": "Green"
     },
     {
-      "_id": "BS3yQTgY0xZ7C7MFKXUa",
-      "title": "Kairos"
+      "_id": "9akC7Wf0HfEhwmm7mOjq",
+      "chart_id": "2DwOtcsxDc6r4z1HdpuU",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "BkY66EAU1RW9ZjV3KYr0",
-      "title": "MAGENTA POTION"
+      "_id": "9zpwHRrNENPIlbRsnRmB",
+      "chart_id": "tqPGiT9p1fbR6Ivpgf3r",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "BoYaLY0e3c2hNqChNNHZ",
-      "title": "QZKago Requiem"
+      "_id": "BNvqgggZeoWqBhQVykRU",
+      "chart_id": "dsJjQHTddbbLDT0Rywyr",
+      "chart": "d",
+      "version_released": "Universe+"
     },
     {
-      "_id": "CmlkNCPgInLoRIL0YE3S",
-      "title": "AMABIE"
+      "_id": "C0WIbn1nR1psEQfxpxYd",
+      "chart_id": "wRgO7GlcJ5FVmWxbhmC4",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "DD2yZTjfCddW6SnjgOgQ",
-      "title": "mystique as iris"
+      "_id": "C4uXZtB7Z6EeiRezRxmU",
+      "chart_id": "vZW6msTRxYJuENUWwsDz",
+      "chart": "d",
+      "version_released": "Universe+"
     },
     {
-      "_id": "ENjsOYwDQT7cR8cebetN",
-      "title": "Vallista"
+      "_id": "DMjcbjFzloqEj9naQaWP",
+      "chart_id": "kfa0HX9N2hX6zj1Hr3Nv",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "F3Wc3QMEGwRF7x5crXt5",
-      "title": "KHYMΞXΛ"
+      "_id": "DPnNYltYilH6oqaRkKZU",
+      "chart_id": "an8rIwiLuRLr1epu93Dh",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "FPygOZlil5ShjWJSpTdb",
-      "title": "FLUFFY FLASH"
+      "_id": "DdGz9Eb8nmETLnTZuPNg",
+      "chart_id": "4hcCHzvY83bStWcQCbJT",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "GWfwOSHZ4XkYoDywcWI4",
-      "title": "康莊大道"
+      "_id": "EFHG5jo8nLRWQfjHA0Uy",
+      "chart_id": "dAdz4MvlauO1A3RNtjpJ",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "Gq2yG9Fg0cNjcohk7i7d",
-      "title": "Schwarzschild"
+      "_id": "EhXTRkVmSo2nQm1uzcIT",
+      "chart_id": "RgO9fWofJ6h3Cpi48ng2",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "HlAhyzQHeQNDFXhMYtSY",
-      "title": "PERSONA feat. PANXI"
+      "_id": "FPdAlJ8d5DIpNbjZbiJE",
+      "chart_id": "si8B0hC7hz71mR2TpnvW",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "J1lf8koTvkAlrAVbTPqN",
-      "title": "Valsqotch"
+      "_id": "FcflofuxlwGEuqyLz253",
+      "chart_id": "daHKkywAKvmp40fpkAKk",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "LKTrXqF9h4uKno7KUbsM",
-      "title": "宵の鳥"
+      "_id": "FePFhHIEGfrd2vphkDTn",
+      "chart_id": "CmlkNCPgInLoRIL0YE3S",
+      "chart": "d",
+      "version_released": "Splash+"
     },
     {
-      "_id": "LsfyTcrIAKtcQLSv0Ay7",
-      "title": "OMAKENO Stroke"
+      "_id": "GDL1jDKSzeKwyjTrUKqx",
+      "chart_id": "BkY66EAU1RW9ZjV3KYr0",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "MDbIl4FM6OnnbqAKifpJ",
-      "title": "GIGANTØMAKHIA"
+      "_id": "HIOP8hk2pvRgFw5IXgzt",
+      "chart_id": "wpxQUfIgpPkyeyjNJ8RZ",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "MRE6tMf1P3njDdg2i26o",
-      "title": "怒槌"
+      "_id": "HcQFIRmEyZcIdIWnHw4A",
+      "chart_id": "oHcj378Fy1W9a79DWd2y",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "NLdoYrSVR8rULrirYw3h",
-      "title": "SILENT BLUE"
+      "_id": "HtwxSlB1AkAXwpqSccFE",
+      "chart_id": "F3Wc3QMEGwRF7x5crXt5",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "OPnyhgW4gYi9uPyuYR7B",
-      "title": "熱異常"
+      "_id": "IQLHSjiiulToBSNNTI73",
+      "chart_id": "fi1pdtwMz8cZWOSPtUc9",
+      "chart": "s",
+      "version_released": "Orange+"
     },
     {
-      "_id": "QJM0uJ8gsrI1RILPMoqJ",
-      "title": "躯樹の墓守"
+      "_id": "IilQHVpgq9CIhwxwS96X",
+      "chart_id": "6uj52Y0LqXbLkszgbRYy",
+      "chart": "s",
+      "version_released": "Murasaki+"
     },
     {
-      "_id": "QSJiQEjh4VgPio3qcln2",
-      "title": "POWER OF UNITY"
+      "_id": "JLsIuVbGTcFq98lPI7NE",
+      "chart_id": "i8FeTT5QyCOyo3qyVYce",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "QnjmHp4rTzJ6KC6ZnSv6",
-      "title": "リフヴェイン"
+      "_id": "KGbmQBSGpL7F1eNOnYNE",
+      "chart_id": "WK70IERRkdQxCB7JVIRf",
+      "chart": "d",
+      "version_released": "Deluxe"
     },
     {
-      "_id": "QrsTX87KQ7NXf0Hntk7N",
-      "title": "IMAWANOKIWA"
+      "_id": "Kt9MjoBQ1PMnbsdhhxGD",
+      "chart_id": "2Jv6KY0o3m275abGdQOm",
+      "chart": "s",
+      "version_released": "Pink"
     },
     {
-      "_id": "QsK9tpNBRPxolkYiAGTe",
-      "title": "sølips"
+      "_id": "L23NijLmLUDu2xKZG3p4",
+      "chart_id": "QJM0uJ8gsrI1RILPMoqJ",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "RgO9fWofJ6h3Cpi48ng2",
-      "title": "脳天直撃"
+      "_id": "LFbfLZLp6zW8ug36mMlx",
+      "chart_id": "sZYsc6sRphrHrYigHIGI",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "RiQnceoUh7AJltqNHPE2",
-      "title": "地球"
+      "_id": "LuzaslgiEi2Cz63S15PB",
+      "chart_id": "eB7Z3uvYKI8yk4SyxdNl",
+      "chart": "s",
+      "version_released": "Milk"
     },
     {
-      "_id": "RlzrC9zFfXnRkPJO7NDX",
-      "title": "ここからはじまるプロローグ。 (Kanon Remix)"
+      "_id": "NBLs9utSXXrxOWCSV7W8",
+      "chart_id": "RiQnceoUh7AJltqNHPE2",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "SiZN26nqAVcOHy29Mbvm",
-      "title": "Complex Mind"
+      "_id": "NHCwhgXRveZPDsdPWRyN",
+      "chart_id": "rd4c4w39QQdsMrKAEMSs",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "Tr3GKLKTURB0mnGPFshj",
-      "title": "VERTeX (rintaro soma deconstructed remix)"
+      "_id": "PEZpBr4x0ArfoxQ2pz1R",
+      "chart_id": "MRE6tMf1P3njDdg2i26o",
+      "chart": "s",
+      "version_released": "Milk+"
     },
     {
-      "_id": "VkPqmbE2UqeDFyKJt4Lf",
-      "title": "ViRTUS"
+      "_id": "Poe6AXjHfaJGNYIM51En",
+      "chart_id": "62btfKqnYk54DBGBCNwj",
+      "chart": "d",
+      "version_released": "Universe+",
+      "youtube": [
+        0,
+        0,
+        0,
+        "https://youtu.be/03KNp074dgk?si=aErhqxMfr-P7-MkJ",
+        0
+      ]
     },
     {
-      "_id": "VxaWQ9r90Gp6cgXgTpGg",
-      "title": "Horoscope Express"
+      "_id": "PzmSvTjkopNRXUVjrD9z",
+      "chart_id": "J1lf8koTvkAlrAVbTPqN",
+      "chart": "d",
+      "version_released": "Deluxe+"
     },
     {
-      "_id": "WK70IERRkdQxCB7JVIRf",
-      "title": "TEmPTaTiON"
+      "_id": "RXbsTs6BN1UD7QJLeTfX",
+      "chart_id": "MDbIl4FM6OnnbqAKifpJ",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "YXoRDEktJ3KWqaS5ML8q",
-      "title": "larva"
+      "_id": "T1flNI4ZBWnfd1aXFbW8",
+      "chart_id": "ufGrStl2qRLDD5QVo6BM",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "ZnAASNd9UWB4DoxuXrIs",
-      "title": "コンティニュー！ feat. 蓝月なくる"
+      "_id": "T4zeYPEPz6h357yL1atS",
+      "chart_id": "f3ePVNRdAWLa9YClc6ye",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "aQOCo2JSnboVYrT6aRJ8",
-      "title": "Selector"
+      "_id": "TnRLkZXMIPh3nbJ2WA1n",
+      "chart_id": "aQOCo2JSnboVYrT6aRJ8",
+      "chart": "s",
+      "version_released": "Murasaki",
+      "youtube": [
+        0,
+        0,
+        0,
+        "https://youtu.be/j1CbAbPb-64?si=CjCD8dd-cyn8TIHq",
+        0
+      ]
     },
     {
-      "_id": "an8rIwiLuRLr1epu93Dh",
-      "title": "BULK UP (GAME EXCLUSIVE EDIT)"
+      "_id": "UMUc2SyGjDMPNtQYdCw1",
+      "chart_id": "FPygOZlil5ShjWJSpTdb",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "cCbsmZdMg4pSv9WPnh9O",
-      "title": "Churros Parlor"
+      "_id": "V4ZOSGdoAcNiw98nCknp",
+      "chart_id": "zjiGBckD5rFsIpEIAUaa",
+      "chart": "d",
+      "version_released": "Deluxe"
     },
     {
-      "_id": "d0P6DS66gUqCRnWC35QQ",
-      "title": "ジングルベル"
+      "_id": "WWJutqxwPe3xgh2PDJ8t",
+      "chart_id": "3OCVPmqKUEiAazkcdRv5",
+      "chart": "d",
+      "version_released": "Universe+"
     },
     {
-      "_id": "dAdz4MvlauO1A3RNtjpJ",
-      "title": "Last Kingdom"
+      "_id": "XJbYnyGFsSliJMaL2CSj",
+      "chart_id": "ydDS1gvatp7YqIggPZlr",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "daHKkywAKvmp40fpkAKk",
-      "title": "enchanted wanderer"
+      "_id": "YbLkqBPZdZe262FKP24V",
+      "chart_id": "cCbsmZdMg4pSv9WPnh9O",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "dct5LLosCbIGI8WSFQtU",
-      "title": "Heavenly Blast"
+      "_id": "YkPIM2RruLgcRFJep5GF",
+      "chart_id": "YXoRDEktJ3KWqaS5ML8q",
+      "chart": "s",
+      "version_released": "Milk+"
     },
     {
-      "_id": "dsJjQHTddbbLDT0Rywyr",
-      "title": "World's end loneliness"
+      "_id": "aYYCTLX3fazussDUHkKP",
+      "chart_id": "Gq2yG9Fg0cNjcohk7i7d",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "e2gH2Jn5fAsSdGjuuWy6",
-      "title": "Moon of Noon"
+      "_id": "ax4OlxqLn9yif1SIcI3U",
+      "chart_id": "yfVyh43V3YuhSg8aicGy",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "eB7Z3uvYKI8yk4SyxdNl",
-      "title": "Excalibur ～Revived Resolution～"
+      "_id": "b6LCB2dBPal5UJhbBpwr",
+      "chart_id": "uqsafSSHxNdvU8miz854",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "f3ePVNRdAWLa9YClc6ye",
-      "title": "LAMIA"
+      "_id": "cvXlZGc94u5C88fFi41f",
+      "chart_id": "BS3yQTgY0xZ7C7MFKXUa",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "fDIGMMp9zQgUNnesA7ka",
-      "title": "AMAZING MIGHTYYYY!!!!"
+      "_id": "dv9cdRNpXavBhRgpuxB6",
+      "chart_id": "HlAhyzQHeQNDFXhMYtSY",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "fi1pdtwMz8cZWOSPtUc9",
-      "title": "ガラテアの螺旋"
+      "_id": "etk2gE9cLjgzdfcQOSQl",
+      "chart_id": "GWfwOSHZ4XkYoDywcWI4",
+      "chart": "s",
+      "version_released": "Festival"
     },
     {
-      "_id": "fzN9kbPMNlw1UEpziRll",
-      "title": "VIIIbit Explorer"
+      "_id": "ffJTQ0xi8AA3op3PqHxS",
+      "chart_id": "u6Xzt9yhonC2KpQC2NY4",
+      "chart": "d",
+      "version_released": "Splash"
     },
     {
-      "_id": "g5NcsP4e3sgGZ8faWIXG",
-      "title": "End Time"
+      "_id": "fvdpGxG1IXkobRZYC5At",
+      "chart_id": "VkPqmbE2UqeDFyKJt4Lf",
+      "chart": "d",
+      "version_released": "Festival"
     },
     {
-      "_id": "i8FeTT5QyCOyo3qyVYce",
-      "title": "PANDORA PARADOXXX"
+      "_id": "h1IAGNjTxfgn6WPoDm12",
+      "chart_id": "QnjmHp4rTzJ6KC6ZnSv6",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "jlGblwgPxNjfy9OSjBoE",
-      "title": "バグ"
+      "_id": "hqVO95W8wrwp0CtQDaBe",
+      "chart_id": "QsK9tpNBRPxolkYiAGTe",
+      "chart": "d",
+      "version_released": "Universe+"
     },
     {
-      "_id": "kfa0HX9N2hX6zj1Hr3Nv",
-      "title": "ツムギボシ"
+      "_id": "i0A1cJGB9JgRXgwmBhWQ",
+      "chart_id": "kwHkdxPst4MRLScfU7Lt",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "kwHkdxPst4MRLScfU7Lt",
-      "title": "VeRForTe αRtE:VEiN"
+      "_id": "iKUqIHYkrvlHHjVyzFqy",
+      "chart_id": "ZnAASNd9UWB4DoxuXrIs",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "lWwx7BGNUmhi48SVFONL",
-      "title": "Cthugha"
+      "_id": "jAwskFXasgiSLxAkLzln",
+      "chart_id": "nEXRdsovsSFFrBJgaWIl",
+      "chart": "s",
+      "version_released": "Orange"
     },
     {
-      "_id": "mu2X8JFqLytxG1s8XcMv",
-      "title": "Regulus"
+      "_id": "kRk6mJyEbzeV4B46Ax6J",
+      "chart_id": "uojOzhKsNDE71QNsuTvV",
+      "chart": "d",
+      "version_released": "Deluxe+"
     },
     {
-      "_id": "nBvFiSAx2jWxyrA9nkD6",
-      "title": "Our Wrenally"
+      "_id": "kuSJUJ5Jyi6A08eAn78z",
+      "chart_id": "g5NcsP4e3sgGZ8faWIXG",
+      "chart": "s",
+      "version_released": "Finale"
     },
     {
-      "_id": "nEXRdsovsSFFrBJgaWIl",
-      "title": "Ignis Danse"
+      "_id": "kwf7Aul04DoS2s4351pW",
+      "chart_id": "Tr3GKLKTURB0mnGPFshj",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "oHLuY4JnqJEVsbDede1g",
-      "title": "リスペク風神"
+      "_id": "lKdFz3MXnTLn7mEFZgZM",
+      "chart_id": "4nwz8dr31hy7BrHKW3h6",
+      "chart": "d",
+      "version_released": "Festival"
     },
     {
-      "_id": "oHcj378Fy1W9a79DWd2y",
-      "title": "モ°ルモ°ル (MZK Skippin’ Remix)"
+      "_id": "lngbbg0YAzsU8jLZupFN",
+      "chart_id": "fzN9kbPMNlw1UEpziRll",
+      "chart": "d",
+      "version_released": "Splash+"
     },
     {
-      "_id": "qdIMLberggf3XeAoTfbK",
-      "title": "Party☆People☆Princess"
+      "_id": "mQQSUxzxNvyZjXLDktad",
+      "chart_id": "d0P6DS66gUqCRnWC35QQ",
+      "chart": "s",
+      "version_released": "Maimai"
     },
     {
-      "_id": "qtOBI3E4FEJtLq9BaQrS",
-      "title": "Lia=Fail"
+      "_id": "nvVP4A0pjGvvJX44z8ec",
+      "chart_id": "NLdoYrSVR8rULrirYw3h",
+      "chart": "s",
+      "version_released": "Milk+",
+      "youtube": [
+        0,
+        0,
+        0,
+        "https://youtu.be/sgCC0ksu854?si=_ieEzrrlKD-fiico",
+        0
+      ]
     },
     {
-      "_id": "rd4c4w39QQdsMrKAEMSs",
-      "title": "Comet Panto Men!"
+      "_id": "nzaht5Fa8YcVHO7uhw2g",
+      "chart_id": "LKTrXqF9h4uKno7KUbsM",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "sArsGPuHpG6aSRBUuIOB",
-      "title": "にゃーにゃー冒険譚"
+      "_id": "r2pFc0NrhiOrxal4tvkr",
+      "chart_id": "wkMUNaWdFXCMpCsEvHmb",
+      "chart": "d",
+      "version_released": "Deluxe+"
     },
     {
-      "_id": "sKeFkeaOVm6Sc5RzHdCC",
-      "title": "初音ミクの消失"
+      "_id": "rjk9DBDgiBNYgvjSYcUP",
+      "chart_id": "qtOBI3E4FEJtLq9BaQrS",
+      "chart": "d",
+      "version_released": "Universe"
     },
     {
-      "_id": "sZYsc6sRphrHrYigHIGI",
-      "title": "the EmpErroR"
+      "_id": "sg9CRL9g2cawrd047Zk0",
+      "chart_id": "dct5LLosCbIGI8WSFQtU",
+      "chart": "d",
+      "version_released": "Splash+"
     },
     {
-      "_id": "sfF52yQ6nBFaDfX6eMkV",
-      "title": "Latent Kingdom"
+      "_id": "tE1cvXY9txjlAgoatLI7",
+      "chart_id": "fDIGMMp9zQgUNnesA7ka",
+      "chart": "s",
+      "version_released": "Pink+"
     },
     {
-      "_id": "si8B0hC7hz71mR2TpnvW",
-      "title": "雷切-RAIKIRI-"
+      "_id": "u6FtozFqaowBtVqYWZji",
+      "chart_id": "5H63NdrnvfaLg5So5WPQ",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "tqPGiT9p1fbR6Ivpgf3r",
-      "title": "BLACK SWAN"
+      "_id": "uhSdx2JoZ91r62kb6ciE",
+      "chart_id": "oHLuY4JnqJEVsbDede1g",
+      "chart": "d",
+      "version_released": "Festival+"
     },
     {
-      "_id": "u6Xzt9yhonC2KpQC2NY4",
-      "title": "BREaK! BREaK! BREaK!"
+      "_id": "vHPWmvVbFHEl4UKeaS8i",
+      "chart_id": "DD2yZTjfCddW6SnjgOgQ",
+      "chart": "d",
+      "version_released": "Festival"
     },
     {
-      "_id": "ufGrStl2qRLDD5QVo6BM",
-      "title": "Final Step!"
+      "_id": "yDD9iC3YrgPGh7vojyX4",
+      "chart_id": "aQOCo2JSnboVYrT6aRJ8",
+      "chart": "d",
+      "version_released": "Festival+",
+      "youtube": [
+        "",
+        "",
+        "",
+        "https://youtu.be/G_eRbnHSdEI?si=1yK6o4SkVtXBs6wv",
+        ""
+      ]
     },
     {
-      "_id": "uojOzhKsNDE71QNsuTvV",
-      "title": "渦状銀河のシンフォニエッタ"
+      "_id": "zPxYAqAUJDcvKhV6Cdr7",
+      "chart_id": "2J2vIrf9vOLhW3QXXLQ8",
+      "version_released": "Festival+",
+      "chart": "d"
     },
     {
-      "_id": "uqsafSSHxNdvU8miz854",
-      "title": "‘ウソテイ’ ～一回戦せりなvsしろなvsなずな～"
+      "_id": "65758fcfe9b67e40d5e4ac40",
+      "chart_id": "7V786CXpdnztOQJESSoY",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "vZW6msTRxYJuENUWwsDz",
-      "title": "チューリングの跡"
+      "_id": "65758ffde9b67e40d5e4ac42",
+      "chart_id": "9kfTZmWRJP2uL8DFh1fF",
+      "chart": "d",
+      "version_released": "Buddies"
     },
     {
-      "_id": "vqNrHcJrhtkjs8n5AA9V",
-      "title": "Energizing Flame"
+      "_id": "65759053e9b67e40d5e4ac43",
+      "chart_id": "9orKYl5u4wLwv2L0FLQE",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "wRgO7GlcJ5FVmWxbhmC4",
-      "title": "あつすぎの歌"
+      "_id": "657590a8e9b67e40d5e4ac44",
+      "chart_id": "OPnyhgW4gYi9uPyuYR7B",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "wkMUNaWdFXCMpCsEvHmb",
-      "title": "封焔の135秒"
+      "_id": "65759149e9b67e40d5e4ac45",
+      "chart_id": "LsfyTcrIAKtcQLSv0Ay7",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "wpxQUfIgpPkyeyjNJ8RZ",
-      "title": "Yorugao"
+      "_id": "6575919ee9b67e40d5e4ac46",
+      "chart_id": "QSJiQEjh4VgPio3qcln2",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "xlmAb1Z0PpC2NJggPaGn",
-      "title": "PUPA"
+      "_id": "6575929ce9b67e40d5e4ac48",
+      "chart_id": "VxaWQ9r90Gp6cgXgTpGg",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "yWj7yd1GWvNyKWnDS7T5",
-      "title": "僕の和風本当上手"
+      "_id": "657592ede9b67e40d5e4ac49",
+      "chart_id": "jlGblwgPxNjfy9OSjBoE",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "yXPkBfchyvRDIvxm9eyV",
-      "title": "おとせサンダー"
+      "_id": "6575933ee9b67e40d5e4ac4a",
+      "chart_id": "qdIMLberggf3XeAoTfbK",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "ydDS1gvatp7YqIggPZlr",
-      "title": "TiamaT:F minor"
+      "_id": "6575938ce9b67e40d5e4ac4b",
+      "chart_id": "sKeFkeaOVm6Sc5RzHdCC",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "yfVyh43V3YuhSg8aicGy",
-      "title": "Alea jacta est!"
+      "_id": "657593e0e9b67e40d5e4ac4c",
+      "chart_id": "sfF52yQ6nBFaDfX6eMkV",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "ymjY2Hx8JG2czkdC9PK0",
-      "title": "青春コンプレックス"
+      "_id": "65759423e9b67e40d5e4ac4d",
+      "chart_id": "vqNrHcJrhtkjs8n5AA9V",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "yuMT38fKDM7QutDJpsLe",
-      "title": "SQUAD-Phvntom-"
+      "_id": "65759463e9b67e40d5e4ac4e",
+      "chart_id": "xlmAb1Z0PpC2NJggPaGn",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "zjiGBckD5rFsIpEIAUaa",
-      "title": "Titania"
+      "_id": "657594a3e9b67e40d5e4ac4f",
+      "chart_id": "ymjY2Hx8JG2czkdC9PK0",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "6576525c9164b346a0a2a733",
-      "title": "DANGEROOOOUS JUNGLE"
+      "_id": "65759526e9b67e40d5e4ac52",
+      "chart_id": "yuMT38fKDM7QutDJpsLe",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "657652c09164b346a0a2a735",
-      "title": "天使光輪"
+      "_id": "6576527a9164b346a0a2a734",
+      "chart_id": "6576525c9164b346a0a2a733",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "6576541d9164b346a0a2a737",
-      "title": "ozma"
+      "_id": "657652fd9164b346a0a2a736",
+      "chart_id": "657652c09164b346a0a2a735",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "657654889164b346a0a2a739",
-      "title": "神威"
+      "_id": "6576542d9164b346a0a2a738",
+      "chart_id": "6576541d9164b346a0a2a737",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "657654ef9164b346a0a2a73b",
-      "title": "月面基地"
+      "_id": "657654979164b346a0a2a73a",
+      "chart_id": "657654889164b346a0a2a739",
+      "version_released": "Buddies",
+      "chart": "d"
     },
     {
-      "_id": "657657809164b346a0a2a73e",
-      "title": "PinqPiq (xovevox Remix)"
+      "_id": "657655099164b346a0a2a73c",
+      "chart_id": "657654ef9164b346a0a2a73b",
+      "version_released": "Buddies",
+      "chart": "d"
+    },
+    {
+      "_id": "657657949164b346a0a2a73f",
+      "chart_id": "657657809164b346a0a2a73e",
+      "version_released": "Buddies",
+      "chart": "d"
     }
   ]
     

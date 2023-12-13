@@ -73,7 +73,7 @@ app.get('/api/songs', async (req, res) => {
   try {
     await client.connect();
     const database = client.db('maimai');
-    const collection = database.collection('charts');
+    const collection = database.collection('songs');
 
     const documents = await collection.find().toArray();
     res.json(documents);
