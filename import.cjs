@@ -8,672 +8,943 @@ async function main() {
   try {
   await client.connect()
   const database = client.db("maimai")
-  const collection = database.collection("charts")
+  const collection = database.collection("Festival+")
 
   const documents = [
     {
       "_id": "0fMsi4ISnovifvlxKvg4",
       "chart_id": "RlzrC9zFfXnRkPJO7NDX",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "14aG67BxQAVRf2C2M5M6",
       "chart_id": "BoYaLY0e3c2hNqChNNHZ",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        14.9
+      ]
     },
     {
       "_id": "16tW9DMHmr0OoHpMY8u9",
       "chart_id": "yXPkBfchyvRDIvxm9eyV",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        0,
+        13.7
+      ]
     },
     {
       "_id": "1NnatSfgRZWWyrdTYslO",
       "chart_id": "mu2X8JFqLytxG1s8XcMv",
-      "chart": "d",
-      "version_released": "Splash"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "3DxsbSDWpLMJwvaNKNh6",
       "chart_id": "nBvFiSAx2jWxyrA9nkD6",
-      "chart": "s",
-      "version_released": "Murasaki"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "3jOujFgdBOvg6M65PfL4",
       "chart_id": "lWwx7BGNUmhi48SVFONL",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.3,
+        0
+      ]
     },
     {
       "_id": "3srBDz7Dy2KKyD0VG6nl",
       "chart_id": "sArsGPuHpG6aSRBUuIOB",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "4J993qXTMEDepOpuMUSz",
       "chart_id": "AqNrejI26bgwvtoWkqSz",
-      "chart": "s",
-      "version_released": "Maimai"
+      "level": [
+        0,
+        0,
+        0,
+        0,
+        14.8
+      ]
     },
     {
       "_id": "4pWjMNKRetDMU8WjG8TK",
       "chart_id": "1LIMxZnmjpTrCTOqNEMp",
-      "chart": "d",
-      "version_released": "Universe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "6LQUujrDidqcbsnjaQmU",
       "chart_id": "SiZN26nqAVcOHy29Mbvm",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "78TP0SqMbReAOTeIA90p",
       "chart_id": "e2gH2Jn5fAsSdGjuuWy6",
-      "chart": "s",
-      "version_released": "Murasaki+"
+      "level": [
+        0,
+        0,
+        0,
+        14.4,
+        0
+      ]
     },
     {
       "_id": "7mycR7mEChbBBhJJrpol",
       "chart_id": "ENjsOYwDQT7cR8cebetN",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14.1,
+        0
+      ]
     },
     {
       "_id": "7rqsxVrHwsFvyA6y4PbH",
       "chart_id": "d0P6DS66gUqCRnWC35QQ",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "8qTPTsqBCVkqQTvYK0HY",
       "chart_id": "yWj7yd1GWvNyKWnDS7T5",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14,
+        0
+      ]
     },
     {
       "_id": "95gSLCFayzzyQ05NkuZC",
       "chart_id": "1jAYpsKVn9mTMWDvzewc",
-      "chart": "s",
-      "version_released": "Green"
+      "level": [
+        0,
+        0,
+        0,
+        14.2,
+        14.8
+      ]
     },
     {
       "_id": "9akC7Wf0HfEhwmm7mOjq",
       "chart_id": "2DwOtcsxDc6r4z1HdpuU",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "9zpwHRrNENPIlbRsnRmB",
       "chart_id": "tqPGiT9p1fbR6Ivpgf3r",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "BNvqgggZeoWqBhQVykRU",
       "chart_id": "dsJjQHTddbbLDT0Rywyr",
-      "chart": "d",
-      "version_released": "Universe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.9,
+        0
+      ]
     },
     {
       "_id": "C0WIbn1nR1psEQfxpxYd",
       "chart_id": "wRgO7GlcJ5FVmWxbhmC4",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "C4uXZtB7Z6EeiRezRxmU",
       "chart_id": "vZW6msTRxYJuENUWwsDz",
-      "chart": "d",
-      "version_released": "Universe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "DMjcbjFzloqEj9naQaWP",
       "chart_id": "kfa0HX9N2hX6zj1Hr3Nv",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.1,
+        0
+      ]
     },
     {
       "_id": "DPnNYltYilH6oqaRkKZU",
       "chart_id": "an8rIwiLuRLr1epu93Dh",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.1,
+        0
+      ]
     },
     {
       "_id": "DdGz9Eb8nmETLnTZuPNg",
       "chart_id": "4hcCHzvY83bStWcQCbJT",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "EFHG5jo8nLRWQfjHA0Uy",
       "chart_id": "dAdz4MvlauO1A3RNtjpJ",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "EhXTRkVmSo2nQm1uzcIT",
       "chart_id": "RgO9fWofJ6h3Cpi48ng2",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "FPdAlJ8d5DIpNbjZbiJE",
       "chart_id": "si8B0hC7hz71mR2TpnvW",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        14.8
+      ]
     },
     {
       "_id": "FcflofuxlwGEuqyLz253",
       "chart_id": "daHKkywAKvmp40fpkAKk",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "FePFhHIEGfrd2vphkDTn",
       "chart_id": "CmlkNCPgInLoRIL0YE3S",
-      "chart": "d",
-      "version_released": "Splash+"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "GDL1jDKSzeKwyjTrUKqx",
       "chart_id": "BkY66EAU1RW9ZjV3KYr0",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "HIOP8hk2pvRgFw5IXgzt",
       "chart_id": "wpxQUfIgpPkyeyjNJ8RZ",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "HcQFIRmEyZcIdIWnHw4A",
       "chart_id": "oHcj378Fy1W9a79DWd2y",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "HtwxSlB1AkAXwpqSccFE",
       "chart_id": "F3Wc3QMEGwRF7x5crXt5",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "IQLHSjiiulToBSNNTI73",
       "chart_id": "fi1pdtwMz8cZWOSPtUc9",
-      "chart": "s",
-      "version_released": "Orange+"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        14.7
+      ]
     },
     {
       "_id": "IilQHVpgq9CIhwxwS96X",
       "chart_id": "6uj52Y0LqXbLkszgbRYy",
-      "chart": "s",
-      "version_released": "Murasaki+"
+      "level": [
+        0,
+        0,
+        0,
+        14.1,
+        0
+      ]
     },
     {
       "_id": "JLsIuVbGTcFq98lPI7NE",
       "chart_id": "i8FeTT5QyCOyo3qyVYce",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.9,
+        15
+      ]
     },
     {
       "_id": "KGbmQBSGpL7F1eNOnYNE",
       "chart_id": "WK70IERRkdQxCB7JVIRf",
-      "chart": "d",
-      "version_released": "Deluxe"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "Kt9MjoBQ1PMnbsdhhxGD",
       "chart_id": "2Jv6KY0o3m275abGdQOm",
-      "chart": "s",
-      "version_released": "Pink"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "L23NijLmLUDu2xKZG3p4",
       "chart_id": "QJM0uJ8gsrI1RILPMoqJ",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.9,
+        0
+      ]
     },
     {
       "_id": "LFbfLZLp6zW8ug36mMlx",
       "chart_id": "sZYsc6sRphrHrYigHIGI",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        14.9
+      ]
     },
     {
       "_id": "LuzaslgiEi2Cz63S15PB",
       "chart_id": "eB7Z3uvYKI8yk4SyxdNl",
-      "chart": "s",
-      "version_released": "Milk"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "NBLs9utSXXrxOWCSV7W8",
       "chart_id": "RiQnceoUh7AJltqNHPE2",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14.3,
+        0
+      ]
     },
     {
       "_id": "NHCwhgXRveZPDsdPWRyN",
       "chart_id": "rd4c4w39QQdsMrKAEMSs",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14,
+        0
+      ]
     },
     {
       "_id": "PEZpBr4x0ArfoxQ2pz1R",
       "chart_id": "MRE6tMf1P3njDdg2i26o",
-      "chart": "s",
-      "version_released": "Milk+"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "Poe6AXjHfaJGNYIM51En",
       "chart_id": "62btfKqnYk54DBGBCNwj",
-      "chart": "d",
-      "version_released": "Universe+",
-      "youtube": [
+      "level": [
         0,
         0,
         0,
-        "https://youtu.be/03KNp074dgk?si=aErhqxMfr-P7-MkJ",
+        14.7,
         0
       ]
     },
     {
       "_id": "PzmSvTjkopNRXUVjrD9z",
       "chart_id": "J1lf8koTvkAlrAVbTPqN",
-      "chart": "d",
-      "version_released": "Deluxe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "RXbsTs6BN1UD7QJLeTfX",
       "chart_id": "MDbIl4FM6OnnbqAKifpJ",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "T1flNI4ZBWnfd1aXFbW8",
       "chart_id": "ufGrStl2qRLDD5QVo6BM",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "T4zeYPEPz6h357yL1atS",
       "chart_id": "f3ePVNRdAWLa9YClc6ye",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "TnRLkZXMIPh3nbJ2WA1n",
       "chart_id": "aQOCo2JSnboVYrT6aRJ8",
-      "chart": "s",
-      "version_released": "Murasaki",
-      "youtube": [
+      "level": [
         0,
         0,
         0,
-        "https://youtu.be/j1CbAbPb-64?si=CjCD8dd-cyn8TIHq",
+        13.7,
         0
       ]
     },
     {
       "_id": "UMUc2SyGjDMPNtQYdCw1",
       "chart_id": "FPygOZlil5ShjWJSpTdb",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.3,
+        0
+      ]
     },
     {
       "_id": "V4ZOSGdoAcNiw98nCknp",
       "chart_id": "zjiGBckD5rFsIpEIAUaa",
-      "chart": "d",
-      "version_released": "Deluxe"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "WWJutqxwPe3xgh2PDJ8t",
       "chart_id": "3OCVPmqKUEiAazkcdRv5",
-      "chart": "d",
-      "version_released": "Universe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "XJbYnyGFsSliJMaL2CSj",
       "chart_id": "ydDS1gvatp7YqIggPZlr",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "YbLkqBPZdZe262FKP24V",
       "chart_id": "cCbsmZdMg4pSv9WPnh9O",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "YkPIM2RruLgcRFJep5GF",
       "chart_id": "YXoRDEktJ3KWqaS5ML8q",
-      "chart": "s",
-      "version_released": "Milk+"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "aYYCTLX3fazussDUHkKP",
       "chart_id": "Gq2yG9Fg0cNjcohk7i7d",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14,
+        14.9
+      ]
     },
     {
       "_id": "ax4OlxqLn9yif1SIcI3U",
       "chart_id": "yfVyh43V3YuhSg8aicGy",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        0,
+        14.8
+      ]
     },
     {
       "_id": "b6LCB2dBPal5UJhbBpwr",
       "chart_id": "uqsafSSHxNdvU8miz854",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "cvXlZGc94u5C88fFi41f",
       "chart_id": "BS3yQTgY0xZ7C7MFKXUa",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "dv9cdRNpXavBhRgpuxB6",
       "chart_id": "HlAhyzQHeQNDFXhMYtSY",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "etk2gE9cLjgzdfcQOSQl",
       "chart_id": "GWfwOSHZ4XkYoDywcWI4",
-      "chart": "s",
-      "version_released": "Festival"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "ffJTQ0xi8AA3op3PqHxS",
       "chart_id": "u6Xzt9yhonC2KpQC2NY4",
-      "chart": "d",
-      "version_released": "Splash"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "fvdpGxG1IXkobRZYC5At",
       "chart_id": "VkPqmbE2UqeDFyKJt4Lf",
-      "chart": "d",
-      "version_released": "Festival"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "h1IAGNjTxfgn6WPoDm12",
       "chart_id": "QnjmHp4rTzJ6KC6ZnSv6",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "hqVO95W8wrwp0CtQDaBe",
       "chart_id": "QsK9tpNBRPxolkYiAGTe",
-      "chart": "d",
-      "version_released": "Universe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.9,
+        0
+      ]
     },
     {
       "_id": "i0A1cJGB9JgRXgwmBhWQ",
       "chart_id": "kwHkdxPst4MRLScfU7Lt",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "iKUqIHYkrvlHHjVyzFqy",
       "chart_id": "ZnAASNd9UWB4DoxuXrIs",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "jAwskFXasgiSLxAkLzln",
       "chart_id": "nEXRdsovsSFFrBJgaWIl",
-      "chart": "s",
-      "version_released": "Orange"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "kRk6mJyEbzeV4B46Ax6J",
       "chart_id": "uojOzhKsNDE71QNsuTvV",
-      "chart": "d",
-      "version_released": "Deluxe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "kuSJUJ5Jyi6A08eAn78z",
       "chart_id": "g5NcsP4e3sgGZ8faWIXG",
-      "chart": "s",
-      "version_released": "Finale"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "kwf7Aul04DoS2s4351pW",
       "chart_id": "Tr3GKLKTURB0mnGPFshj",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "lKdFz3MXnTLn7mEFZgZM",
       "chart_id": "4nwz8dr31hy7BrHKW3h6",
-      "chart": "d",
-      "version_released": "Festival"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "lngbbg0YAzsU8jLZupFN",
       "chart_id": "fzN9kbPMNlw1UEpziRll",
-      "chart": "d",
-      "version_released": "Splash+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "mQQSUxzxNvyZjXLDktad",
       "chart_id": "d0P6DS66gUqCRnWC35QQ",
-      "chart": "s",
-      "version_released": "Maimai"
+      "level": [
+        0,
+        0,
+        0,
+        14.3,
+        14
+      ]
     },
     {
       "_id": "nvVP4A0pjGvvJX44z8ec",
       "chart_id": "NLdoYrSVR8rULrirYw3h",
-      "chart": "s",
-      "version_released": "Milk+",
-      "youtube": [
+      "level": [
         0,
         0,
         0,
-        "https://youtu.be/sgCC0ksu854?si=_ieEzrrlKD-fiico",
+        14.8,
         0
       ]
     },
     {
       "_id": "nzaht5Fa8YcVHO7uhw2g",
       "chart_id": "LKTrXqF9h4uKno7KUbsM",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "r2pFc0NrhiOrxal4tvkr",
       "chart_id": "wkMUNaWdFXCMpCsEvHmb",
-      "chart": "d",
-      "version_released": "Deluxe+"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "rjk9DBDgiBNYgvjSYcUP",
       "chart_id": "qtOBI3E4FEJtLq9BaQrS",
-      "chart": "d",
-      "version_released": "Universe"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "sg9CRL9g2cawrd047Zk0",
       "chart_id": "dct5LLosCbIGI8WSFQtU",
-      "chart": "d",
-      "version_released": "Splash+"
+      "level": [
+        0,
+        0,
+        0,
+        14.8,
+        0
+      ]
     },
     {
       "_id": "tE1cvXY9txjlAgoatLI7",
       "chart_id": "fDIGMMp9zQgUNnesA7ka",
-      "chart": "s",
-      "version_released": "Pink+"
+      "level": [
+        0,
+        0,
+        0,
+        14.7,
+        0
+      ]
     },
     {
       "_id": "u6FtozFqaowBtVqYWZji",
       "chart_id": "5H63NdrnvfaLg5So5WPQ",
-      "version_released": "Festival+",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
     },
     {
       "_id": "uhSdx2JoZ91r62kb6ciE",
       "chart_id": "oHLuY4JnqJEVsbDede1g",
-      "chart": "d",
-      "version_released": "Festival+"
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
     },
     {
       "_id": "vHPWmvVbFHEl4UKeaS8i",
       "chart_id": "DD2yZTjfCddW6SnjgOgQ",
-      "chart": "d",
-      "version_released": "Festival"
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
     },
     {
       "_id": "yDD9iC3YrgPGh7vojyX4",
       "chart_id": "aQOCo2JSnboVYrT6aRJ8",
-      "chart": "d",
-      "version_released": "Festival+",
-      "youtube": [
-        "",
-        "",
-        "",
-        "https://youtu.be/G_eRbnHSdEI?si=1yK6o4SkVtXBs6wv",
-        ""
+      "level": [
+        0,
+        0,
+        0,
+        13.9,
+        0
       ]
     },
     {
       "_id": "zPxYAqAUJDcvKhV6Cdr7",
       "chart_id": "2J2vIrf9vOLhW3QXXLQ8",
-      "version_released": "Festival+",
-      "chart": "d"
-    },
-    {
-      "_id": "65758fcfe9b67e40d5e4ac40",
-      "chart_id": "7V786CXpdnztOQJESSoY",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "65758ffde9b67e40d5e4ac42",
-      "chart_id": "9kfTZmWRJP2uL8DFh1fF",
-      "chart": "d",
-      "version_released": "Buddies"
-    },
-    {
-      "_id": "65759053e9b67e40d5e4ac43",
-      "chart_id": "9orKYl5u4wLwv2L0FLQE",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657590a8e9b67e40d5e4ac44",
-      "chart_id": "OPnyhgW4gYi9uPyuYR7B",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "65759149e9b67e40d5e4ac45",
-      "chart_id": "LsfyTcrIAKtcQLSv0Ay7",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6575919ee9b67e40d5e4ac46",
-      "chart_id": "QSJiQEjh4VgPio3qcln2",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6575929ce9b67e40d5e4ac48",
-      "chart_id": "VxaWQ9r90Gp6cgXgTpGg",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657592ede9b67e40d5e4ac49",
-      "chart_id": "jlGblwgPxNjfy9OSjBoE",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6575933ee9b67e40d5e4ac4a",
-      "chart_id": "qdIMLberggf3XeAoTfbK",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6575938ce9b67e40d5e4ac4b",
-      "chart_id": "sKeFkeaOVm6Sc5RzHdCC",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657593e0e9b67e40d5e4ac4c",
-      "chart_id": "sfF52yQ6nBFaDfX6eMkV",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "65759423e9b67e40d5e4ac4d",
-      "chart_id": "vqNrHcJrhtkjs8n5AA9V",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "65759463e9b67e40d5e4ac4e",
-      "chart_id": "xlmAb1Z0PpC2NJggPaGn",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657594a3e9b67e40d5e4ac4f",
-      "chart_id": "ymjY2Hx8JG2czkdC9PK0",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "65759526e9b67e40d5e4ac52",
-      "chart_id": "yuMT38fKDM7QutDJpsLe",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6576527a9164b346a0a2a734",
-      "chart_id": "6576525c9164b346a0a2a733",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657652fd9164b346a0a2a736",
-      "chart_id": "657652c09164b346a0a2a735",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "6576542d9164b346a0a2a738",
-      "chart_id": "6576541d9164b346a0a2a737",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657654979164b346a0a2a73a",
-      "chart_id": "657654889164b346a0a2a739",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657655099164b346a0a2a73c",
-      "chart_id": "657654ef9164b346a0a2a73b",
-      "version_released": "Buddies",
-      "chart": "d"
-    },
-    {
-      "_id": "657657949164b346a0a2a73f",
-      "chart_id": "657657809164b346a0a2a73e",
-      "version_released": "Buddies",
-      "chart": "d"
+      "level": [
+        0,
+        0,
+        0,
+        14,
+        0
+      ]
     }
   ]
     
