@@ -8,7 +8,7 @@ async function main() {
   try {
   await client.connect()
   const database = client.db("maimai")
-  const collection = database.collection("Festival+")
+  const collection = database.collection("Buddies")
 
   const documents = [
     {
@@ -337,7 +337,7 @@ async function main() {
         0,
         0,
         0,
-        14.6,
+        14.7,
         0
       ]
     },
@@ -579,7 +579,7 @@ async function main() {
         0,
         0,
         0,
-        14.6,
+        14.7,
         0
       ]
     },
@@ -920,7 +920,7 @@ async function main() {
         0,
         0,
         0,
-        14.6,
+        14.7,
         0
       ]
     },
@@ -943,6 +943,237 @@ async function main() {
         0,
         0,
         14,
+        0
+      ]
+    },
+    {
+      "_id": "65758fcfe9b67e40d5e4ac40",
+      "chart_id": "7V786CXpdnztOQJESSoY",
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
+    },
+    {
+      "_id": "65758ffde9b67e40d5e4ac42",
+      "chart_id": "9kfTZmWRJP2uL8DFh1fF",
+      "level": [
+        0,
+        0,
+        0,
+        14.4,
+        0
+      ]
+    },
+    {
+      "_id": "65759053e9b67e40d5e4ac43",
+      "chart_id": "9orKYl5u4wLwv2L0FLQE",
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
+    },
+    {
+      "_id": "657590a8e9b67e40d5e4ac44",
+      "chart_id": "OPnyhgW4gYi9uPyuYR7B",
+      "level": [
+        0,
+        0,
+        0,
+        11.8,
+        13.9
+      ]
+    },
+    {
+      "_id": "65759149e9b67e40d5e4ac45",
+      "chart_id": "LsfyTcrIAKtcQLSv0Ay7",
+      "level": [
+        0,
+        0,
+        11.9,
+        13.8,
+        0
+      ]
+    },
+    {
+      "_id": "6575919ee9b67e40d5e4ac46",
+      "chart_id": "QSJiQEjh4VgPio3qcln2",
+      "level": [
+        0,
+        0,
+        12,
+        13.8,
+        0
+      ]
+    },
+    {
+      "_id": "6575929ce9b67e40d5e4ac48",
+      "chart_id": "VxaWQ9r90Gp6cgXgTpGg",
+      "level": [
+        0,
+        0,
+        0,
+        13.9,
+        0
+      ]
+    },
+    {
+      "_id": "657592ede9b67e40d5e4ac49",
+      "chart_id": "jlGblwgPxNjfy9OSjBoE",
+      "level": [
+        0,
+        0,
+        10.2,
+        11.8,
+        13.9
+      ]
+    },
+    {
+      "_id": "6575933ee9b67e40d5e4ac4a",
+      "chart_id": "qdIMLberggf3XeAoTfbK",
+      "level": [
+        0,
+        0,
+        11.9,
+        14.3,
+        0
+      ]
+    },
+    {
+      "_id": "6575938ce9b67e40d5e4ac4b",
+      "chart_id": "sKeFkeaOVm6Sc5RzHdCC",
+      "level": [
+        0,
+        0,
+        12,
+        14.5,
+        0
+      ]
+    },
+    {
+      "_id": "657593e0e9b67e40d5e4ac4c",
+      "chart_id": "sfF52yQ6nBFaDfX6eMkV",
+      "level": [
+        0,
+        0,
+        12.8,
+        14.8,
+        0
+      ]
+    },
+    {
+      "_id": "65759423e9b67e40d5e4ac4d",
+      "chart_id": "vqNrHcJrhtkjs8n5AA9V",
+      "level": [
+        0,
+        0,
+        12.8,
+        14.4,
+        0
+      ]
+    },
+    {
+      "_id": "65759463e9b67e40d5e4ac4e",
+      "chart_id": "xlmAb1Z0PpC2NJggPaGn",
+      "level": [
+        0,
+        0,
+        12.8,
+        14.5,
+        0
+      ]
+    },
+    {
+      "_id": "657594a3e9b67e40d5e4ac4f",
+      "chart_id": "ymjY2Hx8JG2czkdC9PK0",
+      "level": [
+        0,
+        0,
+        10,
+        11.8,
+        13.8
+      ]
+    },
+    {
+      "_id": "65759526e9b67e40d5e4ac52",
+      "chart_id": "yuMT38fKDM7QutDJpsLe",
+      "level": [
+        0,
+        0,
+        12.8,
+        14.4,
+        0
+      ]
+    },
+    {
+      "_id": "6576527a9164b346a0a2a734",
+      "chart_id": "6576525c9164b346a0a2a733",
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
+        0
+      ]
+    },
+    {
+      "_id": "657652fd9164b346a0a2a736",
+      "chart_id": "657652c09164b346a0a2a735",
+      "level": [
+        0,
+        0,
+        12.5,
+        14.4,
+        0
+      ]
+    },
+    {
+      "_id": "6576542d9164b346a0a2a738",
+      "chart_id": "6576541d9164b346a0a2a737",
+      "level": [
+        0,
+        0,
+        12.9,
+        13.9,
+        0
+      ]
+    },
+    {
+      "_id": "657654979164b346a0a2a73a",
+      "chart_id": "657654889164b346a0a2a739",
+      "level": [
+        0,
+        0,
+        0,
+        14.6,
+        0
+      ]
+    },
+    {
+      "_id": "657655099164b346a0a2a73c",
+      "chart_id": "657654ef9164b346a0a2a73b",
+      "level": [
+        0,
+        0,
+        0,
+        13.7,
+        0
+      ]
+    },
+    {
+      "_id": "657657949164b346a0a2a73f",
+      "chart_id": "657657809164b346a0a2a73e",
+      "level": [
+        0,
+        0,
+        0,
+        13.8,
         0
       ]
     }
