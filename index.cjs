@@ -14,7 +14,7 @@ app.get('/home', (req, res) => {
 
 // MongoDB connection and route
 app.get('/api/festivalplus', async (req, res) => {
-  const db = process.env.ATLAS_URI;
+  const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
 
   try {
@@ -33,7 +33,7 @@ app.get('/api/festivalplus', async (req, res) => {
 });
 
 app.get('/api/buddies', async (req, res) => {
-  const db = process.env.ATLAS_URI;
+  const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
 
   try {
@@ -52,7 +52,7 @@ app.get('/api/buddies', async (req, res) => {
 });
 
 app.get('/api/utage', async (req, res) => {
-  const db = process.env.ATLAS_URI;
+  const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
 
   try {
@@ -71,7 +71,7 @@ app.get('/api/utage', async (req, res) => {
 });
 
 app.get('/api/charts', async (req, res) => {
-  const db = process.env.ATLAS_URI;
+  const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
 
   try {
@@ -90,7 +90,7 @@ app.get('/api/charts', async (req, res) => {
 });
 
 app.get('/api/songs', async (req, res) => {
-  const db = process.env.ATLAS_URI;
+  const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
 
   try {
