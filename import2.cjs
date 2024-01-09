@@ -8,124 +8,14 @@ async function main() {
   try {
   await client.connect()
   const database = client.db("maimai")
-  const collection = database.collection("utage")
+  const collection = database.collection("charts")
 
   const documents = [
     {
-      "chart_id": "AqNrejI26bgwvtoWkqSz",
-      "level": 14.7,
-      "type": "蔵"
-    },
-    {
-      "chart_id": "2Jv6KY0o3m275abGdQOm",
-      "level": 14.7, 
-      "type": "蔵"
-    },
-    {
-      "chart_id": "658d260f139837b24d4ef882",
-      "level": 14.7,
-      "type": "狂"
-    },
-    {
-      "chart_id": "658d2664139837b24d4ef883",
-      "level": 13,
-      "type": "宴"
-    },
-    {
-      "chart_id": "1jAYpsKVn9mTMWDvzewc",
-      "level": 14, 
-      "type": "宴",
-      "youtube": ["https://youtu.be/N0qUWHOi8rI?si=gmqk9b8ns2A5sLqU"]
-    },
-    {
-      "chart_id": "658d2723139837b24d4ef884",
-      "level": 13.7,
-      "type": "宴"
-    },
-    {
-      "chart_id": "658d2765139837b24d4ef885",
-      "level": 12.7,
-      "type": "蛸"
-    },
-    {
-      "chart_id": "658d27af139837b24d4ef886",
-      "level": 12,
-      "type": "覚"
-    },
-    {
-      "chart_id": "658d2823139837b24d4ef887",
-      "level": 13,
-      "type": "宴"
-    },
-    {
-      "chart_id": "658d284e139837b24d4ef888",
-      "level": 13,
-      "type": "星"
-    },
-    {
-      'chart_id': '658d288b139837b24d4ef889',
-      'level': 14.7,
-      'type': '蔵'
-    },
-    {
-      'chart_id': 'u6Xzt9yhonC2KpQC2NY4',
-      'level': 14.7,
-      'type': '光'
-    },
-    {
-      'chart_id': '658d28f4139837b24d4ef88a',
-      'level': 13,
-      'type': '宴'
-    },
-    {
-      'chart_id': 'ymjY2Hx8JG2czkdC9PK0',
-      'level': 14.7, 
-      'type': '協'
-    },
-    {
-      'chart_id': 'ymjY2Hx8JG2czkdC9PK0',
-      'level': 13,
-      'type': '協'
-    },
-    {
-      "chart_id": '658d299a139837b24d4ef88b',
-      'level': 13,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d29be139837b24d4ef88c",
-      'level': 13,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d29f1139837b24d4ef88d",
-      'level': 13,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d2a16139837b24d4ef88e",
-      'level': 14,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d2a39139837b24d4ef88f",
-      'level': 13.7,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d2a58139837b24d4ef890",
-      'level': 13,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d2a7e139837b24d4ef891",
-      'level': 12.7,
-      'type': '協'
-    },
-    {
-      "chart_id": "658d2a95139837b24d4ef892",
-      'level': 12,
-      'type': '協'
+      _id: '659395240963e5e09b20895b',
+      chart_id: '65928ca0f3bd6c46a1252ada',
+      version_released: 'Festival+',
+      chart: 'd'
     }
   ]
 
