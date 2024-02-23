@@ -130,8 +130,7 @@ app.get('/api/submit', (req, res) => {
   res.json(data);
 });
 
-const scriptDirectory = path.dirname(require.resolve('./fetch.js'))
-app.use(express.static(scriptDirectory))
+app.use(express.static('./fetch.js'))
 
 // Start the server
 app.listen(port, () => {
