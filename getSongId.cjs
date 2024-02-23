@@ -10,7 +10,7 @@ async function main() {
     const database = client.db("maimai");
     const songsCollection = database.collection("songs");
 
-    const songTitle = "超熊猫的周遊記（ワンダーパンダートラベラー）"; // Replace with the actual song title
+    const songTitle = "星めぐり、果ての君へ。"; // Replace with the actual song title
 
     const song = await songsCollection.findOne({ title: songTitle });
     if (song) {

@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const { MongoClient } = require('mongodb');
 require('dotenv').config({ path: './config.env' });
 
@@ -107,6 +108,11 @@ app.get('/api/songs', async (req, res) => {
     await client.close();
   }
 });
+
+app.post('/api/submit', (req, res) => {
+  const formData = req.body
+  res.json(formData)
+})
 
 // Start the server
 app.listen(port, () => {
