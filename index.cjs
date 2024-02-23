@@ -8,6 +8,7 @@ const app = express();
 const port = 443; // Choose a port number for your server
 
 app.use(cors())
+app.use(bodyParser.json())
 
 app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
