@@ -110,6 +110,7 @@ app.get('/api/songs', async (req, res) => {
   }
 });
 
+const data = []
 app.post('/api/submit', (req, res) => {
   const formData = req.body;
 
@@ -120,7 +121,12 @@ app.post('/api/submit', (req, res) => {
     console.log(`${key}: ${value}`);
   }
 
+  data.push(formData);
   res.json(formData);
+});
+
+app.get('/api/submit', (req, res) => {
+  res.json(data);
 });
 
 // Start the server
