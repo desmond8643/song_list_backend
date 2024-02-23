@@ -110,7 +110,7 @@ app.get('/api/songs', async (req, res) => {
   }
 });
 
-const data = []
+let data = []
 app.post('/api/submit', (req, res) => {
   const formData = req.body;
 
@@ -121,6 +121,7 @@ app.post('/api/submit', (req, res) => {
     console.log(`${key}: ${value}`);
   }
 
+  data = []
   data.push(formData);
   res.json(formData);
 });
