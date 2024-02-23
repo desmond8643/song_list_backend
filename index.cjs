@@ -111,9 +111,17 @@ app.get('/api/songs', async (req, res) => {
 });
 
 app.post('/api/submit', (req, res) => {
-  const formData = req.body
-  res.json(formData)
-})
+  const formData = req.body;
+
+  // Process the form data
+  for (const key in formData) {
+    const value = formData[key];
+    // Perform any desired operations with the key-value pair
+    console.log(`${key}: ${value}`);
+  }
+
+  res.json(formData);
+});
 
 // Start the server
 app.listen(port, () => {
