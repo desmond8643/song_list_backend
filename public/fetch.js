@@ -47,7 +47,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           stats1.push({ value, attribute })
         }
 
-        const musicDivs = doc.querySelectorAll(".music_master_score_back")
+        const musicDivs = doc1.querySelectorAll(".music_master_score_back")
 
         const songs = []
 
