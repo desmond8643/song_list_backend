@@ -97,6 +97,12 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
 
         stats1.push(songs)
 
+        // Combine the data from all sources
+        const formData = {
+          name: name,
+          masterData: stats1,
+        }
+
         // Send the form data to your backend API endpoint
         fetch("https://song-list-backend.vercel.app/api/submit", {
           method: "POST",
