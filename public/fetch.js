@@ -145,7 +145,7 @@ fetchAndProcessData("https://maimaidx-eng.com/maimai-mobile/home/")
       }
 
       // Splitting the form data into smaller chunks
-      const chunkSize = 500 // Number of entries per chunk
+      const chunkSize = 300 // Number of entries per chunk
       const entries = Object.entries(formData)
       const chunks = []
 
