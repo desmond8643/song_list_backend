@@ -131,7 +131,7 @@ app.get('/api/submit', (req, res) => {
 });
 
 const path = require('path');
-app.use(express.static(path.resolve(__dirname, 'fetch.js')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Start the server
 app.listen(port, () => {
