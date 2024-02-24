@@ -47,16 +47,19 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           stats1.push({ value, attribute })
         }
 
-        const musicDivs = doc1.querySelectorAll(".music_master_score_back")
+        const musicDivs = doc1.querySelectorAll(".w_450")
 
         const songs = []
-
+  
         musicDivs.forEach((musicDiv) => {
-          const nameElement = musicDiv.querySelector(".music_name_block")
-          const name = nameElement.textContent.trim()
-
-          const scoreBlockElements =
-            musicDiv.querySelectorAll(".music_score_block")
+          const nameElement = musicDiv.querySelector(
+            ".music_master_score_back .music_name_block"
+          )
+          const name = nameElement ? nameElement.textContent.trim() : ""
+  
+          const scoreBlockElements = musicDiv.querySelectorAll(
+            ".music_master_score_back .music_score_block"
+          )
           const achievement = scoreBlockElements[0]
             ? scoreBlockElements[0].textContent
             : ""
@@ -64,8 +67,29 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
             ? scoreBlockElements[1].textContent
             : ""
           deluxeScore = deluxeScore.replace(/[\n\t]/g, "")
-
-          songs.push({ name, achievement, deluxeScore })
+  
+          const isDXChart =
+            musicDiv.querySelector(".music_kind_icon_dx.music_master_btn_on") !==
+            null
+          const isStdChart =
+            musicDiv.querySelector(
+              ".music_kind_icon_standard.music_master_btn_on"
+            ) !== null
+  
+          if (isDXChart) {
+            // If both standard and DX icons are present, prefer DX chart
+            songs.push({ name, achievement, deluxeScore, chart: "dx" })
+          } else if (isStdChart) {
+            songs.push({ name, achievement, deluxeScore, chart: "std" })
+          } else {
+            const imgElement = musicDiv.querySelector(".music_kind_icon")
+            const src = imgElement ? imgElement.getAttribute("src") : ""
+            if (src.includes("standard")) {
+              songs.push({ name, achievement, deluxeScore, chart: "std" })
+            } else if (src.includes("dx")) {
+              songs.push({ name, achievement, deluxeScore, chart: "dx" })
+            }
+          }
         })
 
         stats1.push(songs)
