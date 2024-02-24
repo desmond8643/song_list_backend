@@ -130,7 +130,7 @@ app.get('/api/submit', (req, res) => {
   res.json(data);
 });
 
-app.use(express.static('./fetch.js'))
+app.use(express.static('.'))
 
 // Start the server
 app.listen(port, () => {
