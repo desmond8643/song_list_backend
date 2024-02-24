@@ -69,14 +69,15 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
 
           const isDXChart =
-            musicDiv.querySelector(".music_kind_icon_dx.music_master_btn_on") !==
-            null
+            musicDiv.querySelector(
+              ".music_kind_icon_dx.music_master_btn_on"
+            ) !== null
           const isStdChart =
             musicDiv.querySelector(
               ".music_kind_icon_standard.music_master_btn_on"
             ) !== null
 
-            // songs.push({name, achievement, deluxeScore})
+          // songs.push({name, achievement, deluxeScore})
 
           if (isDXChart) {
             // If both standard and DX icons are present, prefer DX chart
@@ -95,6 +96,29 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
         })
 
         stats1.push(songs)
+
+        // Send the form data to your backend API endpoint
+        fetch("https://song-list-backend.vercel.app/api/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Form data sent successfully")
+              return response.json() // Parse the response JSON
+            } else {
+              throw new Error("Failed to send form data")
+            }
+          })
+          .then((data) => {
+            console.log("Response from backend:", data)
+          })
+          .catch((error) => {
+            console.error("An error occurred while sending form data:", error)
+          })
       })
       .catch((error) => {
         console.error("Error fetching master data:", error)
@@ -103,4 +127,3 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
   .catch((error) => {
     console.error("Error fetching name:", error)
   })
-
