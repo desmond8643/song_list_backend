@@ -1,5 +1,3 @@
-
-
 const submitFormData = async (formData) => {
   try {
     const response = await fetch(
