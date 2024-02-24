@@ -66,7 +66,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           let deluxeScore = scoreBlockElements[1]
             ? scoreBlockElements[1].textContent
             : ""
-          deluxeScore = deluxeScore.replace(/[\n\t]/g, "")
+          deluxeScore = deluxeScore.replace(/[,\n\t]/g, "")
   
           const isDXChart =
             musicDiv.querySelector(".music_kind_icon_dx.music_master_btn_on") !==
