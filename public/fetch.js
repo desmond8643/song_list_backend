@@ -1,8 +1,8 @@
 fetch('https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99&diff=3')
   .then(response => response.text())
-  .then(data1 => {
+  .then(masterData => {
     const parser = new DOMParser();
-    const doc1 = parser.parseFromString(data1, 'text/html');
+    const doc1 = parser.parseFromString(masterData, 'text/html');
 
     const elements1 = doc1.getElementsByClassName('f_10');
     const stats1 = [];
@@ -19,8 +19,8 @@ fetch('https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99
     // Fetch data from the second page
     fetch('https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99&diff=2')
       .then(response => response.text())
-      .then(data2 => {
-        const doc2 = parser.parseFromString(data2, 'text/html');
+      .then(expertData => {
+        const doc2 = parser.parseFromString(expertData, 'text/html');
 
         const elements2 = doc2.getElementsByClassName('f_10');
         const stats2 = [];
@@ -33,8 +33,8 @@ fetch('https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99
 
         // Combine the data from both pages
         const formData = {
-          data1: stats1,
-          data2: stats2
+          masterData: stats1,
+          expertData: stats2
         };
 
         // Send the form data to your backend API endpoint
