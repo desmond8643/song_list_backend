@@ -75,21 +75,23 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
             musicDiv.querySelector(
               ".music_kind_icon_standard.music_master_btn_on"
             ) !== null
+          
+            songs.push({name, achievement, deluxeScore})
   
-          if (isDXChart) {
-            // If both standard and DX icons are present, prefer DX chart
-            songs.push({ name, achievement, deluxeScore, chart: "dx" })
-          } else if (isStdChart) {
-            songs.push({ name, achievement, deluxeScore, chart: "std" })
-          } else {
-            const imgElement = musicDiv.querySelector(".music_kind_icon")
-            const src = imgElement ? imgElement.getAttribute("src") : ""
-            if (src.includes("standard")) {
-              songs.push({ name, achievement, deluxeScore, chart: "std" })
-            } else if (src.includes("dx")) {
-              songs.push({ name, achievement, deluxeScore, chart: "dx" })
-            }
-          }
+          // if (isDXChart) {
+          //   // If both standard and DX icons are present, prefer DX chart
+          //   songs.push({ name, achievement, deluxeScore, chart: "dx" })
+          // } else if (isStdChart) {
+          //   songs.push({ name, achievement, deluxeScore, chart: "std" })
+          // } else {
+          //   const imgElement = musicDiv.querySelector(".music_kind_icon")
+          //   const src = imgElement ? imgElement.getAttribute("src") : ""
+          //   if (src.includes("standard")) {
+          //     songs.push({ name, achievement, deluxeScore, chart: "std" })
+          //   } else if (src.includes("dx")) {
+          //     songs.push({ name, achievement, deluxeScore, chart: "dx" })
+          //   }
+          // }
         })
 
         stats1.push(songs)
