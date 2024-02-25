@@ -74,7 +74,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
 function getSongData(doc, difficulty, get) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
-  let overallStats = ""
+  let overallStats = []
   const attributes = [
     "Clear",
     "S",
@@ -103,7 +103,8 @@ function getSongData(doc, difficulty, get) {
     const value = elements1[i].textContent
     const attribute = attributes[i]
 
-    overallStats += `${attribute}: ${value}\n`
+    // overallStats += `${attribute}: ${value}\n`
+    overallStats.push({attribute: value})
   }
 
   stats.push(overallStats)
