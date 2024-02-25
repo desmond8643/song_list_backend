@@ -101,7 +101,7 @@ function getSongData(doc, difficulty) {
     const value = elements1[i].textContent
     const attribute = attributes[i]
 
-    overallStats.push({ value, attribute })
+    overallStats.push(`${attribute}: ${value}`)
   }
 
   stats.push(overallStats)
