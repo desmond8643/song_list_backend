@@ -28,7 +28,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
             const formData = {
               name: name,
               masterData: stats1,
-              expetData: stats2,
+              expertData: stats2,
             }
 
             // Send the form data to your backend API endpoint
@@ -72,7 +72,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
 function getSongData(doc, difficulty) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
-  const overallStats = []
+  const overallStats = ""
   const attributes = [
     "Clear",
     "S",
@@ -101,7 +101,7 @@ function getSongData(doc, difficulty) {
     const value = elements1[i].textContent
     const attribute = attributes[i]
 
-    overallStats.push(`${attribute}: ${value}`)
+    overallStats += `${attribute}: ${value}\n`
   }
 
   stats.push(overallStats)
