@@ -72,7 +72,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
 function getSongData(doc, difficulty) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
-  const overallStats = ""
+  let overallStats = ""
   const attributes = [
     "Clear",
     "S",
