@@ -14,9 +14,48 @@
       .then((response) => response.text())
       .then((masterData) => {
         const doc1 = parser.parseFromString(masterData, "text/html")
+        const stats1 = getSongData(doc1)
+        
+        // Combine the data from all sources
+        const formData = {
+          name: name,
+          masterData: stats1,
+        }
 
-        const elements1 = doc1.getElementsByClassName("f_10")
-        const stats1 = []
+        // Send the form data to your backend API endpoint
+        fetch("https://song-list-backend.vercel.app/api/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Form data sent successfully")
+              return response.json() // Parse the response JSON
+            } else {
+              throw new Error("Failed to send form data")
+            }
+          })
+          .then((data) => {
+            console.log("Response from backend:", data)
+          })
+          .catch((error) => {
+            console.error("An error occurred while sending form data:", error)
+          })
+      })
+      .catch((error) => {
+        console.error("Error fetching master data:", error)
+      })
+  })
+  .catch((error) => {
+    console.error("Error fetching name:", error)
+  })
+
+  function getSongData(doc) {
+    const elements1 = doc.getElementsByClassName("f_10")
+        const stats = []
         const attributes = [
           "Clear",
           "S",
@@ -44,10 +83,10 @@
         for (let i = 0; i < elements1.length; i++) {
           const value = elements1[i].textContent
           const attribute = attributes[i]
-          stats1.push({ value, attribute })
+          stats.push({ value, attribute })
         }
 
-        const musicDivs = doc1.querySelectorAll(".w_450")
+        const musicDivs = doc.querySelectorAll(".w_450")
 
         const songs = []
 
@@ -94,42 +133,6 @@
             }
           }
         })
-
-        stats1.push(songs)
-
-        // Combine the data from all sources
-        const formData = {
-          name: name,
-          masterData: stats1,
-        }
-
-        // Send the form data to your backend API endpoint
-        fetch("https://song-list-backend.vercel.app/api/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => {
-            if (response.ok) {
-              console.log("Form data sent successfully")
-              return response.json() // Parse the response JSON
-            } else {
-              throw new Error("Failed to send form data")
-            }
-          })
-          .then((data) => {
-            console.log("Response from backend:", data)
-          })
-          .catch((error) => {
-            console.error("An error occurred while sending form data:", error)
-          })
-      })
-      .catch((error) => {
-        console.error("Error fetching master data:", error)
-      })
-  })
-  .catch((error) => {
-    console.error("Error fetching name:", error)
-  })
+        stats.push(songs)
+        return stats
+  }
