@@ -23,7 +23,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           .then((expertData) => {
             const doc2 = parser.parseFromString(expertData, "text/html")
             const stats2 = getSongData(doc2, "expert", "score")
-            const songName = getSongData(doc2, "", "name")
+            const songName = getSongData(doc2, "expert", "name")
 
             // Combine the data from all sources
             const formData = {
