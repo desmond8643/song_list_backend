@@ -160,16 +160,16 @@ function getSongData(doc, difficulty) {
 
     if (isDXChart) {
       // If both standard and DX icons are present, prefer DX chart
-      songs.push(`${name} (dx), ${achievement}, ${deluxeScore}`)
+      songs.push(`${achievement}, ${deluxeScore}`)
     } else if (isStdChart) {
-      songs.push(`${name} (std), ${achievement}, ${deluxeScore}`)
+      songs.push(`${achievement}, ${deluxeScore}`)
     } else {
       const imgElement = musicDiv.querySelector(".music_kind_icon")
       const src = imgElement ? imgElement.getAttribute("src") : ""
       if (src.includes("standard")) {
-        songs.push(`${name} (std), ${achievement}, ${deluxeScore}`)
+        songs.push(`${achievement}, ${deluxeScore}`)
       } else if (src.includes("dx")) {
-        songs.push(`${name} (dx), ${achievement}, ${deluxeScore}`)
+        songs.push(`${achievement}, ${deluxeScore}`)
       }
     }
   })
