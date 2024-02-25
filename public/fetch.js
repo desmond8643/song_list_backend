@@ -30,6 +30,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
               name: name,
               masterData: stats1,
               expertData: stats2,
+              songName
             }
 
             // Send the form data to your backend API endpoint
