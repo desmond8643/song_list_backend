@@ -173,6 +173,6 @@ function getSongData(doc, difficulty) {
       }
     }
   })
-  stats.push(songs)
+  stats.push(JSON.stringify(songs))
   return stats
 }
