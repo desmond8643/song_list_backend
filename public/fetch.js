@@ -14,7 +14,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
       .then((response) => response.text())
       .then((masterData) => {
         const doc1 = parser.parseFromString(masterData, "text/html")
-        const stats1 = getSongData(doc1)
+        const stats1 = getSongData(doc1, "master")
 
         fetch(
           "https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99&diff=2"
@@ -22,7 +22,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           .then((response) => response.text())
           .then((expertData) => {
             const doc2 = parser.parseFromString(expertData, "text/html")
-            const stats2 = getSongData(doc2)
+            const stats2 = getSongData(doc2, "expert")
 
             // Combine the data from all sources
             const formData = {
@@ -69,8 +69,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
     console.error("Error fetching name:", error)
   })
 
-
-function getSongData(doc) {
+function getSongData(doc, difficulty) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
   const overallStats = []
@@ -98,8 +97,6 @@ function getSongData(doc) {
     "5",
   ]
 
-
-
   for (let i = 0; i < elements1.length; i++) {
     const value = elements1[i].textContent
     const attribute = attributes[i]
@@ -114,14 +111,43 @@ function getSongData(doc) {
   const songs = []
 
   musicDivs.forEach((musicDiv) => {
-    const nameElement = musicDiv.querySelector(
-      ".music_master_score_back .music_name_block"
-    )
+    let nameElement = ""
+    let scoreBlockElements = ""
+    let isDXChart = ""
+    let isStdChart = ""
+
+    if (difficulty === "master") {
+      nameElement = musicDiv.querySelector(
+        ".music_master_score_back .music_name_block"
+      )
+      scoreBlockElements = musicDiv.querySelectorAll(
+        ".music_master_score_back .music_score_block"
+      )
+      isDXChart =
+        musicDiv.querySelector(".music_kind_icon_dx.music_master_btn_on") !==
+        null
+      isStdChart =
+        musicDiv.querySelector(
+          ".music_kind_icon_standard.music_master_btn_on"
+        ) !== null
+    } else if (difficulty === "expert") {
+      nameElement = musicDiv.querySelector(
+        ".music_expert_score_back .music_name_block"
+      )
+      scoreBlockElements = musicDiv.querySelectorAll(
+        ".music_expert_score_back .music_score_block"
+      )
+      isDXChart =
+        musicDiv.querySelector(".music_kind_icon_dx.music_expert_btn_on") !==
+        null
+      isStdChart =
+        musicDiv.querySelector(
+          ".music_kind_icon_standard.music_expert_btn_on"
+        ) !== null
+    }
+
     const name = nameElement ? nameElement.textContent.trim() : ""
 
-    const scoreBlockElements = musicDiv.querySelectorAll(
-      ".music_master_score_back .music_score_block"
-    )
     const achievement = scoreBlockElements[0]
       ? scoreBlockElements[0].textContent
       : ""
@@ -129,13 +155,6 @@ function getSongData(doc) {
       ? scoreBlockElements[1].textContent
       : ""
     deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
-
-    const isDXChart =
-      musicDiv.querySelector(".music_kind_icon_dx.music_master_btn_on") !== null
-    const isStdChart =
-      musicDiv.querySelector(
-        ".music_kind_icon_standard.music_master_btn_on"
-      ) !== null
 
     // songs.push({name, achievement, deluxeScore})
 
