@@ -69,10 +69,11 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
     console.error("Error fetching name:", error)
   })
 
-  
+
 function getSongData(doc) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
+  const overallStats = []
   const attributes = [
     "Clear",
     "S",
@@ -97,11 +98,16 @@ function getSongData(doc) {
     "5",
   ]
 
+
+
   for (let i = 0; i < elements1.length; i++) {
     const value = elements1[i].textContent
     const attribute = attributes[i]
-    stats.push({ value, attribute })
+
+    overallStats.push({ value, attribute })
   }
+
+  stats.push(JSON.stringify(overallStats))
 
   const musicDivs = doc.querySelectorAll(".w_450")
 
