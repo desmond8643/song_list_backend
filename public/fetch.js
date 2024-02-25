@@ -14,7 +14,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
       .then((response) => response.text())
       .then((masterData) => {
         const doc1 = parser.parseFromString(masterData, "text/html")
-        const stats1 = getSongData(doc1, "master")
+        const stats1 = getSongData(doc1, "master", "score")
 
         fetch(
           "https://maimaidx-eng.com/maimai-mobile/record/musicGenre/search/?genre=99&diff=2"
@@ -22,7 +22,8 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
           .then((response) => response.text())
           .then((expertData) => {
             const doc2 = parser.parseFromString(expertData, "text/html")
-            const stats2 = getSongData(doc2, "expert")
+            const stats2 = getSongData(doc2, "expert", "score")
+            const songName = getSongData(doc2, "", "name")
 
             // Combine the data from all sources
             const formData = {
@@ -69,7 +70,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
     console.error("Error fetching name:", error)
   })
 
-function getSongData(doc, difficulty) {
+function getSongData(doc, difficulty, get) {
   const elements1 = doc.getElementsByClassName("f_10")
   const stats = []
   let overallStats = ""
@@ -109,6 +110,7 @@ function getSongData(doc, difficulty) {
   const musicDivs = doc.querySelectorAll(".w_450")
 
   const songs = []
+  const songNames = []
 
   musicDivs.forEach((musicDiv) => {
     let nameElement = ""
@@ -161,18 +163,25 @@ function getSongData(doc, difficulty) {
     if (isDXChart) {
       // If both standard and DX icons are present, prefer DX chart
       songs.push(`${achievement}, ${deluxeScore}`)
+      songNames.push(`${name} (dx)`)
     } else if (isStdChart) {
       songs.push(`${achievement}, ${deluxeScore}`)
+      songNames.push(`${name} (std)`)
     } else {
       const imgElement = musicDiv.querySelector(".music_kind_icon")
       const src = imgElement ? imgElement.getAttribute("src") : ""
       if (src.includes("standard")) {
         songs.push(`${achievement}, ${deluxeScore}`)
+        songNames.push(`${name} (std)`)
       } else if (src.includes("dx")) {
         songs.push(`${achievement}, ${deluxeScore}`)
+        songNames.push(`${name} (dx)`)
       }
     }
   })
   stats.push(songs)
-  return stats
+  if (get === "score") return stats
+  if (get === "name") return songNames
+
+  
 }
