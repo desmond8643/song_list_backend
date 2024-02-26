@@ -316,23 +316,15 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
     const nameElement = masterMusicDiv.querySelector(
       ".music_master_score_back .music_name_block"
     )
-
     const isDXChart =
       musicDiv.querySelector(
-        `.music_kind_icon_dx.music_${difficulty}_btn_on`
+        `.music_kind_icon_dx.music_master_btn_on`
       ) !== null
     const isStdChart =
       musicDiv.querySelector(
-        `.music_kind_icon_standard.music_${difficulty}_btn_on`
+        `.music_kind_icon_standard.music_master_btn_on`
       ) !== null
-    const achievement = scoreBlockElements[0]
-      ? scoreBlockElements[0].textContent
-      : ""
-    let deluxeScore = scoreBlockElements[1]
-      ? scoreBlockElements[1].textContent
-      : ""
-    deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
-
+  
     let name = nameElement ? nameElement.textContent.trim() : ""
     if (isDXChart) name += " (dx)"
     else if (isStdChart) {
