@@ -348,15 +348,14 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
         : ""
       deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
 
-      const name = nameElement ? nameElement.textContent.trim() : ""
-      if (isDXChart) name.push(`${name} (dx)`)
+      let name = nameElement ? nameElement.textContent.trim() : ""
+      if (isDXChart) name += ' (dx)'
       else if (isStdChart) {
-        name.push(`${name} (std)`)
-      } else {
+        name += ' (std)'
         const imgElement = musicDiv.querySelector(".music_kind_icon")
         const src = imgElement ? imgElement.getAttribute("src") : ""
-        if (src.includes("standard")) name.push(`${name} (std)`)
-        else if (src.includes("dx")) name.push(`${name} (dx)`)
+        if (src.includes("standard")) name += " (std)"
+        else if (src.includes("dx")) name += " (dx)"
       }
 
       songObj.name = name
