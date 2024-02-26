@@ -317,11 +317,11 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       ".music_master_score_back .music_name_block"
     )
     const isDXChart =
-      musicDiv.querySelector(
+      masterMusicDiv.querySelector(
         `.music_kind_icon_dx.music_master_btn_on`
       ) !== null
     const isStdChart =
-      musicDiv.querySelector(
+      masterMusicDiv.querySelector(
         `.music_kind_icon_standard.music_master_btn_on`
       ) !== null
   
