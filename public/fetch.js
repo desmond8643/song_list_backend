@@ -370,14 +370,14 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       if (achievement.includes(".0000")) achievement = achievement.replace(".0000", "")
 
       let name = nameElement ? nameElement.textContent.trim() : ""
-      if (isDXChart) name += " (dx)"
+      if (isDXChart) name += "(dx)"
       else if (isStdChart) {
-        name += " (std)"
+        name += "(std)"
       } else {
         const imgElement = musicDiv.querySelector(".music_kind_icon")
         const src = imgElement ? imgElement.getAttribute("src") : ""
-        if (src.includes("standard")) name += " (std)"
-        else if (src.includes("dx")) name += " (dx)"
+        if (src.includes("standard")) name += "(std)"
+        else if (src.includes("dx")) name += "(dx)"
       }
 
       songObj.name = name
