@@ -352,9 +352,9 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       if (isDXChart) name += " (dx)"
       else if (isStdChart) {
         name += " (std)"
+      } else {
         const imgElement = musicDiv.querySelector(".music_kind_icon")
         const src = imgElement ? imgElement.getAttribute("src") : ""
-      } else {
         if (src.includes("standard")) name += " (std)"
         else if (src.includes("dx")) name += " (dx)"
       }
