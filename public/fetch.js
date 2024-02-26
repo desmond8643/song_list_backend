@@ -220,6 +220,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
                 // Combine the data from all sources
                 const formData = {
                   stats: {
+                    name,
                     expert: getStats(doc2),
                     master: getStats(doc1),
                     remaster: getStats(doc3),
