@@ -322,9 +322,6 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
     }
   })
   // create a copy of song name and score in respect of their own difficulty
-  const expertSongs = createCopy(expertMusicDivs, "expert")
-  const masterSongs = createCopy(masterMusicDivs, "master")
-  const remasterSongs = createCopy(remasterMusicDivs, "remaster")
   const createCopy = (musicDivs, difficulty) => {
     const copy = []
     musicDivs.forEach((musicDiv) => {
@@ -370,7 +367,10 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
 
     return copy
   }
-
+  const expertSongs = createCopy(expertMusicDivs, "expert")
+  const masterSongs = createCopy(masterMusicDivs, "master")
+  const remasterSongs = createCopy(remasterMusicDivs, "remaster")
+  
   // find the song in respect of their own difficulty and add to the object that only has the song name
   songs.forEach(song => {
     if (expertSongs.find(obj => obj.name === song.name)) {
