@@ -381,7 +381,7 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       }
 
       songObj.name = name
-      songObj.score = `${achievement}, ${deluxeScore}`
+      songObj.score = `${achievement},${deluxeScore}`
 
       if (name !== "") copy.push(songObj)
     })
