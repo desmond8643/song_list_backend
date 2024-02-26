@@ -224,7 +224,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
                     master: getStats(doc1),
                     remaster: getStats(doc3),
                   },
-                  songs: getSongNameAndScore(doc2, doc1, doc3)
+                  songs: getSongNameAndScore(doc2, doc1, doc3),
                 }
 
                 // Send the form data to your backend API endpoint
@@ -349,11 +349,12 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
 
       let name = nameElement ? nameElement.textContent.trim() : ""
-      if (isDXChart) name += ' (dx)'
+      if (isDXChart) name += " (dx)"
       else if (isStdChart) {
-        name += ' (std)'
+        name += " (std)"
         const imgElement = musicDiv.querySelector(".music_kind_icon")
         const src = imgElement ? imgElement.getAttribute("src") : ""
+      } else {
         if (src.includes("standard")) name += " (std)"
         else if (src.includes("dx")) name += " (dx)"
       }
@@ -369,20 +370,20 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
   const expertSongs = createCopy(expertMusicDivs, "expert")
   const masterSongs = createCopy(masterMusicDivs, "master")
   const remasterSongs = createCopy(remasterMusicDivs, "remaster")
-  
+
   // find the song in respect of their own difficulty and add to the object that only has the song name
-  songs.forEach(song => {
+  songs.forEach((song) => {
     const arr = []
-    if (expertSongs.find(obj => obj.name === song.name)) {
-      const obj = expertSongs.find(obj => obj.name === song.name)
+    if (expertSongs.find((obj) => obj.name === song.name)) {
+      const obj = expertSongs.find((obj) => obj.name === song.name)
       arr.push(obj.score)
     }
-    if (masterSongs.find(obj => obj.name === song.name)) {
-      const obj = masterSongs.find(obj => obj.name === song.name)
+    if (masterSongs.find((obj) => obj.name === song.name)) {
+      const obj = masterSongs.find((obj) => obj.name === song.name)
       arr.push(obj.score)
     }
-    if (remasterSongs.find(obj => obj.name === song.name)) {
-      const obj = remasterSongs.find(obj => obj.name === song.name)
+    if (remasterSongs.find((obj) => obj.name === song.name)) {
+      const obj = remasterSongs.find((obj) => obj.name === song.name)
       arr.push(obj.score)
     }
     song.score = arr
