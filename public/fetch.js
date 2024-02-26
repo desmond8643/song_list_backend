@@ -372,18 +372,20 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
   
   // find the song in respect of their own difficulty and add to the object that only has the song name
   songs.forEach(song => {
+    const arr = []
     if (expertSongs.find(obj => obj.name === song.name)) {
       const obj = expertSongs.find(obj => obj.name === song.name)
-      song.expert = obj.score
+      arr.push(obj.score)
     }
     if (masterSongs.find(obj => obj.name === song.name)) {
       const obj = masterSongs.find(obj => obj.name === song.name)
-      song.master = obj.score
+      arr.push(obj.score)
     }
     if (remasterSongs.find(obj => obj.name === song.name)) {
       const obj = remasterSongs.find(obj => obj.name === song.name)
-      song.remaster = obj.score
+      arr.push(obj.score)
     }
+    song.score = arr
   })
 
   return songs
