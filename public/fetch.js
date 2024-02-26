@@ -367,7 +367,7 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
         : ""
       deluxeScore = deluxeScore.replace(/[ ,\n\t]/g, "")
       achievement = achievement.replace(/%/, "")
-      if (achievement.includes("0000")) achievement = achievement.replace("0000", "")
+      if (achievement.includes(".0000")) achievement = achievement.replace(".0000", "")
 
       let name = nameElement ? nameElement.textContent.trim() : ""
       if (isDXChart) name += " (dx)"
