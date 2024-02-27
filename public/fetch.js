@@ -58,6 +58,7 @@ fetch("https://maimaidx-eng.com/maimai-mobile/home/")
                   })
                   .then((data) => {
                     console.log("Response from backend:", data)
+                    window.open("https://yozoramaimai.vercel.app/statistics", "_blank");
                   })
                   .catch((error) => {
                     console.error(
