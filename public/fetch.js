@@ -140,6 +140,7 @@ function getSongNameAndScore(expertDoc, masterDoc, remasterDoc) {
       ) !== null
   
     let name = nameElement ? nameElement.textContent.trim() : ""
+    if (nameElement && name === "") name = " "
     if (isDXChart) name += "(dx)"
     else if (isStdChart) {
       name += "(std)"
