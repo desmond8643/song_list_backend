@@ -72,6 +72,23 @@ app.get('/api/buddiesplus', async (req, res) => {
   }
 });
 
+app.get("/api/buddiespluslevel14", async (req, res) => {
+  const db = process.env.ATLAS_URI
+  const client = new MongoClient(db)
+  try {
+    await client.connect()
+    const database = client.db("maimai")
+    const collection = database.collection("Buddies+")
+    const documents = await collection.find({ level: { $gt: 13.9 } }).toArray()
+    res.json(documents)
+  } catch (error) {
+    console.error(error)
+  } finally {
+    await client.close()
+  }
+})
+
+
 app.get('/api/utage', async (req, res) => {
   const db = process.env.MONGODB_URI;
   const client = new MongoClient(db);
