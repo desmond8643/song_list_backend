@@ -8,7 +8,7 @@ async function main() {
   try {
     await client.connect()
     const database = client.db("maimai")
-    const buddiesPlusCollection = database.collection("Buddies+")
+    const buddiesPlusCollection = database.collection("Prism")
 
     const buddiesPlusDocuments = [
       {
